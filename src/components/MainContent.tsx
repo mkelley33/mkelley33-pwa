@@ -26,11 +26,8 @@ export default function MainContent() {
       <p>
         Aside from coding, I love music (especially listening to records), play
         a few instruments, collect stamps, read mostly non-fiction, meditate,
-        and write in a notebook about all the things I do&emdash;pretty much
-        daily.
-      </p>
-      <p>
-        You can view the source for this Web site on
+        and write in a notebook about all the things I do&mdash;pretty much
+        daily. You can view the source for this Web site on{' '}
         <a href="https://github.com/mkelley33/mkelley33-pwa" target="github">
           GitHub
         </a>
