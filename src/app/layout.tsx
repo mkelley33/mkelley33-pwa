@@ -8,9 +8,10 @@ const APP_NAME = 'mkelley33 PWA';
 const APP_DEFAULT_TITLE = 'About';
 const APP_TITLE_TEMPLATE = '%s - mkelley33';
 const APP_DESCRIPTION =
-  'The home, blog, and miscellaneous web musings of @mkelley33';
+  'The home, blog, and miscellaneous web development musings of @mkelley33';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.VERCEL_URL!),
   applicationName: APP_NAME,
   title: {
     default: APP_DEFAULT_TITLE,
@@ -36,6 +37,8 @@ export const metadata: Metadata = {
       template: APP_TITLE_TEMPLATE,
     },
     description: APP_DESCRIPTION,
+    images: '/images/profile-pic.png',
+    url: new URL(process.env.VERCEL_URL!),
   },
   twitter: {
     card: 'summary',
@@ -44,6 +47,10 @@ export const metadata: Metadata = {
       template: APP_TITLE_TEMPLATE,
     },
     description: APP_DESCRIPTION,
+    images: '/images/profile-pic.webp',
+    site: '@mkelley33',
+    creator: '@mkelley33',
+    creatorId: '@mkelley33',
   },
   icons: {
     shortcut: '/icons/favicon.ico',
