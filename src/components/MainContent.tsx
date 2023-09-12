@@ -14,20 +14,22 @@ export default function MainContent() {
         className="float-left w-[150px] h-[150px] mr-[1rem] mb-[0.5rem]"
       />
       <p>
-        I&apos;m Michaux Kelley, and for about 10 years now I&apos;ve been
-        mostly a front-end software engineer, developing software primarily with{' '}
+        I&apos;m Michaux Kelley, and for over 10 years now I&apos;ve been a
+        front-end software engineer, developing software primarily with{' '}
         <a href="https://react.dev/" target="react-dev">
           React
         </a>
         , using HTML5, CSS3, JavaScript, and TypeScript to build responsive web
-        apps that scale and support mobile devices. Mostly, I just like helping
-        people solve problems in a user-friendly way.
+        apps that scale and support a variety of devices. I enjoy assisting
+        people by solving complex problems in a user-friendly way.
       </p>
       <p>
-        Aside from coding, I love music (especially listening to records), play
-        a few instruments, collect stamps, read mostly non-fiction, meditate,
-        and write in a notebook about all the things I do&mdash;pretty much
-        daily. You can view the source for this Web site on{' '}
+        Aside from coding, I love listening to music, playing musical
+        instruments, collecting stamps, reading non-fiction, meditating, and
+        journaling.
+      </p>
+      <p>
+        You can view the source for this Web site on{' '}
         <a href="https://github.com/mkelley33/mkelley33-pwa" target="github">
           GitHub
         </a>
