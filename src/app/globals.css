@@ -30,6 +30,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-p {
-  @apply lg:text-xl mb-7;
+@layer base {
+  h1 {
+    @apply text-3xl mb-7;
+  }
+  p {
+    @apply lg:text-xl mb-7;
+  }
 }

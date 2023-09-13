@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function MainContent() {
   return (
     <section>
-      <h1 className="text-3xl mb-7">About me</h1>
+      <h1>About me</h1>
       <Image
         src={profilePic}
         alt="Michaux Kelley Profile Pic"
