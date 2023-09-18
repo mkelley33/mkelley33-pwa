@@ -19,22 +19,28 @@
   }
 }
 
-body {
+html {
   color: rgb(var(--foreground-rgb));
-  height: 100dvh;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  background-attachment: fixed;
 }
 
 @layer base {
   h1 {
-    @apply text-3xl mb-7;
+    @apply text-3xl mb-4;
+  }
+  h2 {
+    @apply text-2xl mb-4 mt-4 text-slate-400;
   }
   p {
-    @apply lg:text-xl mb-7;
+    @apply lg:text-lg mb-7;
+  }
+  code {
+    @apply mb-4;
   }
 }
