@@ -31,7 +31,8 @@
     "src/**/*.tsx",
     ".next/types/**/*.ts",
     "next.config.js",
-    "contentlayer.config.js",
+    "contentlayer.config.ts",
+    ".contentlayer/generated",
     "./jest-setup.ts"
   ],
   "exclude": ["node_modules"]
