@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { compareDesc, format, parseISO } from 'date-fns';
 import { allPosts, Post } from 'contentlayer/generated';
 import clsx from 'clsx';
+import Pagination from '@/components/Pagination';
 
 // https://gist.github.com/kottenator/9d936eb3e4e3c3e02598?permalink_comment_id=3413141#gistcomment-3413141
 function paginate(current: number, total: number) {
@@ -73,38 +74,16 @@ export default async function BlogList({
       {postsSlice.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
-      {totalPages > 1 && (
-        <div className="border-t-2 pt-3 border-slate-500">
-          {!isFirstPage && (
-            <Link className="mr-3" href={prevPage}>
-              Prev
-            </Link>
-          )}
-          {pagination.map((currentPage, idx) => (
-            <span key={idx}>
-              {currentPage !== '...' && (
-                <Link
-                  className={clsx('mr-3', {
-                    'no-underline': page === currentPage,
-                  })}
-                  href={`/blog/?page=${currentPage}`}
-                >
-                  {currentPage}
-                </Link>
-              )}
-              {currentPage === '...' && (
-                <Link
-                  className="mr-3"
-                  href={`/blog/?page=${page < totalPages ? totalPages : 1}`}
-                >
-                  {currentPage}
-                </Link>
-              )}
-            </span>
-          ))}
-          {!isLastPage && <Link href={nextPage}>Next</Link>}
-        </div>
-      )}
+
+      <Pagination
+        isFirstPage={isFirstPage}
+        isLastPage={isLastPage}
+        pagination={pagination}
+        page={page}
+        totalPages={totalPages}
+        nextPage={nextPage}
+        prevPage={prevPage}
+      />
     </section>
   );
 }

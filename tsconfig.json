@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": ".",
     "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -9,7 +10,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -30,7 +31,8 @@
     "src/**/*.tsx",
     ".next/types/**/*.ts",
     "next.config.js",
-    "contentlayer.config.js"
+    "contentlayer.config.js",
+    "./jest-setup.ts"
   ],
   "exclude": ["node_modules"]
 }
