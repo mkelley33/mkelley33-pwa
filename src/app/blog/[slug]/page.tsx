@@ -4,6 +4,7 @@ import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import './prism.css';
 
 interface IBlogPostProps {
   params: { slug: string };

@@ -36,9 +36,14 @@ html {
   }
   h2 {
     @apply text-2xl mb-4 mt-4 text-slate-400;
+  }
+  h3 {
+    @apply text-xl mb-4 mt-4 text-slate-400;
+  }
+  h2,
+  h3 {
     svg {
-      display: inline-block;
-      @apply inline-block float-left mr-2 mt-1;
+      @apply inline-block mr-2 mt-0;
     }
   }
   p {

@@ -2,11 +2,10 @@ import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import rehypeAutoLinkHeadings, {
   type Options as AutolinkOptions,
 } from 'rehype-autolink-headings';
-import rehypePrettyCode, {
-  type Options as PrettyCodeOptions,
-} from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
+import rehypeCodeTitles from 'rehype-code-titles';
+import rehypePrism from 'rehype-prism-plus';
 import { s } from 'hastscript';
 
 export const Post = defineDocumentType(() => ({
@@ -50,23 +49,12 @@ export default makeSource({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,
-      [
-        rehypePrettyCode,
-        {
-          theme: 'github-dark',
-          onVisitLine(node) {
-            // Prevent lines from collapsing in 'display: grid' mode, and allow empty
-            // lines to be copy/pasted
-            if (node.children.length === 0) {
-              node.children = [{ type: 'text', value: ' ' }];
-            }
-          },
-        } satisfies Partial<PrettyCodeOptions>,
-      ],
+      rehypeCodeTitles,
+      rehypePrism,
       [
         rehypeAutoLinkHeadings,
         {
-          behavior: 'append',
+          behavior: 'prepend',
           test: ['h2', 'h3'],
           properties: { class: 'heading-link', ariaLabel: 'Link to section' },
           content: s(
