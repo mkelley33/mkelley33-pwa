@@ -26,17 +26,15 @@ export default function BlogPost({ params: { slug } }: IBlogPostProps) {
   };
 
   return (
-    <div>
-      <article>
-        <h1>{post.title}</h1>
-        <time
-          dateTime={post.date}
-          className="block text-xs uppercase font-bold mb-3"
-        >
-          {format(parseISO(post.date), 'MMM dd, yyyy')}
-        </time>
-        <MDXContent components={mdxComponents} />
-      </article>
-    </div>
+    <article>
+      <h1>{post.title}</h1>
+      <time
+        dateTime={post.date}
+        className="block text-xs uppercase font-bold mb-3"
+      >
+        {format(parseISO(post.date), 'MMM dd, yyyy')}
+      </time>
+      <MDXContent components={mdxComponents} />
+    </article>
   );
 }
