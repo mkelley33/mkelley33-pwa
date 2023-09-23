@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import type { MDXComponents } from 'mdx/types';
 import { allPosts } from 'contentlayer/generated';
@@ -13,7 +14,7 @@ interface IBlogPostProps {
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
-export default function BlogPost({ params: { slug } }: IBlogPostProps) {
+const BlogPost = ({ params: { slug } }: IBlogPostProps) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === slug);
 
   if (!post) notFound();
@@ -37,4 +38,6 @@ export default function BlogPost({ params: { slug } }: IBlogPostProps) {
       <MDXContent components={mdxComponents} />
     </article>
   );
-}
+};
+
+export default memo(BlogPost);
