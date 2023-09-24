@@ -2,11 +2,7 @@
 
 import { useEffect } from 'react';
 
-export default function RefreshPwaProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function PwaLifecycle() {
   useEffect(() => {
     if (
       typeof window !== 'undefined' &&
@@ -30,12 +26,11 @@ export default function RefreshPwaProvider({
             'A newer version of this web app is available, reload to update?'
           )
         ) {
+          // Send a message to the waiting service worker, instructing it to activate.
+          wb.messageSkipWaiting();
           wb.addEventListener('controlling', () => {
             window.location.reload();
           });
-
-          // Send a message to the waiting service worker, instructing it to activate.
-          wb.messageSkipWaiting();
         } else {
           console.log(
             'User rejected to update SW, keeping the old version. New version will be automatically loaded when the app is opened next time.'
@@ -53,10 +48,10 @@ export default function RefreshPwaProvider({
         console.log(event);
       });
 
-      // never forget to call register as automatic registration is turned off in next.config.js
+      // Don't forget to call register as automatic registration is disabled.
       wb.register();
     }
   }, []);
 
-  return <>{children}</>;
+  return <></>;
 }
