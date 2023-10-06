@@ -1,0 +1,18 @@
+.form-control {
+  @apply block mb-5 w-[400px] m-auto;
+}
+
+.text-input {
+  @apply bg-slate-50 w-[400px];
+}
+
+.MuiTextField-root > label {
+  @apply bg-slate-50 text-slate-900 rounded-md -top-1;
+  &:first-child {
+    @apply inline-block p-1 -left-[2.5px];
+  }
+}
+
+.MuiTextField-root > .MuiFormLabel-root.Mui-focused {
+  @apply bg-slate-50 text-blue-900;
+}

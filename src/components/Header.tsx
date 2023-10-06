@@ -6,7 +6,16 @@ export default function Header() {
       <Link href="/" className="text-4xl">
         @mkelley33:
       </Link>
-      <Link href="/blog">Blog</Link>
+      <nav>
+        <ul className="list-none flex gap-10">
+          <li>
+            <Link href="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }

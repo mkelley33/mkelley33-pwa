@@ -75,6 +75,9 @@
       )
       rgb(var(--background-start-rgb));
     background-attachment: fixed;
+    position: fixed;
+    opacity: 0.9;
+    z-index: 1500;
   }
 
   a {
