@@ -1,7 +1,3 @@
-.form-control {
-  @apply w-[400px] m-auto;
-}
-
 .text-input {
   @apply bg-slate-50 w-[400px];
 }

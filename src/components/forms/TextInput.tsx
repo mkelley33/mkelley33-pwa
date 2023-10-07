@@ -24,7 +24,11 @@ export const InnerTextInput = (
     <FormControl
       error={!!errors[id]?.message}
       variant="outlined"
-      sx={{ display: 'block !important' }}
+      sx={{
+        display: 'block',
+        width: '400px',
+        margin: '0 auto 1.25rem auto',
+      }}
     >
       <TextField
         id={id}
