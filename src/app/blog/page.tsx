@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { compareDesc, format, parseISO } from 'date-fns';
-import { allPosts, Post } from 'contentlayer/generated';
-import clsx from 'clsx';
+import { allPosts, type Post } from 'contentlayer/generated';
 import Pagination from '@/components/Pagination';
 import { memo } from 'react';
 
