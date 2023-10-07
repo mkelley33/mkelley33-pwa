@@ -2,7 +2,6 @@ import { TextField } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
 import { ForwardedRef, forwardRef } from 'react';
 import '@/components/forms/forms.css';
 
@@ -25,7 +24,7 @@ export const InnerTextInput = (
     <FormControl
       error={!!errors[id]?.message}
       variant="outlined"
-      className="form-control"
+      sx={{ display: 'block !important' }}
     >
       <TextField
         id={id}

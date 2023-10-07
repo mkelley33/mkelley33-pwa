@@ -1,5 +1,5 @@
 .form-control {
-  @apply block mb-5 w-[400px] m-auto;
+  @apply w-[400px] m-auto;
 }
 
 .text-input {

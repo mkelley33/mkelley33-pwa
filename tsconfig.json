@@ -23,7 +23,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
-    }
+    },
+    "types": ["@ducanh2912/next-pwa/workbox"]
   },
   "include": [
     "next-env.d.ts",
