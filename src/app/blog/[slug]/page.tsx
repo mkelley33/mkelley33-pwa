@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import type { MDXComponents } from 'mdx/types';
 import { allPosts } from 'contentlayer/generated';
@@ -40,4 +39,4 @@ const BlogPost = ({ params: { slug } }: IBlogPostProps) => {
   );
 };
 
-export default memo(BlogPost);
+export default BlogPost;
