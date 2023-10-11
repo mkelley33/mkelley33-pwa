@@ -12,7 +12,10 @@ const APP_DESCRIPTION =
   'The home, blog, and miscellaneous web development musings of @mkelley33';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.VERCEL_URL!),
+  metadataBase: new URL(
+    `${process.env.NODE_ENV === 'production' ? 'https' : 'http'}://${process.env
+      .VERCEL_URL!}`
+  ),
   applicationName: APP_NAME,
   title: {
     default: APP_DEFAULT_TITLE,
@@ -39,7 +42,10 @@ export const metadata: Metadata = {
     },
     description: APP_DESCRIPTION,
     images: '/images/profile-pic.png',
-    url: new URL(process.env.VERCEL_URL!),
+    url: new URL(
+      `${process.env.NODE_ENV === 'production' ? 'https' : 'http'}://${process
+        .env.VERCEL_URL!}`
+    ),
   },
   twitter: {
     card: 'summary',
