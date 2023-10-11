@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import transporter from '@/lib/transporter';
+import transporter from '../../../lib/transporter';
 
 export const dynamic = 'force-dynamic';
 
@@ -42,9 +42,9 @@ export async function POST(req: Request) {
     const json = await req.json();
     const response = await sendContactEmail(json);
     return NextResponse.json(response);
-  } catch (e: any) {
+  } catch (e) {
     return NextResponse.json({
-      error: e.message,
+      error: 'Something went wrong. Please try again.',
     });
   }
 }
