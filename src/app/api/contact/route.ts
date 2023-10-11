@@ -42,10 +42,9 @@ export async function POST(req: Request) {
     const json = await req.json();
     const response = await sendContactEmail(json);
     return NextResponse.json(response);
-  } catch (e) {
-    console.log(e);
+  } catch (e: any) {
     return NextResponse.json({
-      error: 'Something went wrong. Please try again.',
+      error: e.message,
     });
   }
 }
