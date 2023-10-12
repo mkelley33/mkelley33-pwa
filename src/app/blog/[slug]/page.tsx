@@ -5,6 +5,7 @@ import { format, parseISO } from 'date-fns';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import './prism.css';
+import DisqusComments from '@/components/DisqusComments';
 
 interface IBlogPostProps {
   params: { slug: string };
@@ -26,16 +27,19 @@ const BlogPost = ({ params: { slug } }: IBlogPostProps) => {
   };
 
   return (
-    <article>
-      <h1>{post.title}</h1>
-      <time
-        dateTime={post.date}
-        className="block text-xs uppercase font-bold mb-3"
-      >
-        {format(parseISO(post.date), 'MMM dd, yyyy')}
-      </time>
-      <MDXContent components={mdxComponents} />
-    </article>
+    <>
+      <article>
+        <h1>{post.title}</h1>
+        <time
+          dateTime={post.date}
+          className="block text-xs uppercase font-bold mb-3"
+        >
+          {format(parseISO(post.date), 'MMM dd, yyyy')}
+        </time>
+        <MDXContent components={mdxComponents} />
+      </article>
+      <DisqusComments post={post} slug={slug} />
+    </>
   );
 };
 
