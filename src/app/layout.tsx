@@ -71,7 +71,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className="justify-start lg:max-w-5xl mx-auto pt-[150px] pl-12 pr-12">
+        <main className="lg:max-w-5xl mx-auto pt-[150px] pl-12 pr-12">
           {children}
         </main>
         <Footer />
