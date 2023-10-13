@@ -20,7 +20,7 @@ const DisqusComments = ({ post, slug }: IPost) => {
   };
 
   return (
-    <div>
+    <div className="mb-20">
       <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
     </div>
   );
