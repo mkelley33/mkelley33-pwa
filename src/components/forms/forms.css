@@ -1,5 +1,5 @@
 .text-input {
-  @apply bg-slate-50 w-[400px];
+  @apply bg-slate-50 w-[340px];
 }
 
 .MuiTextField-root > label {

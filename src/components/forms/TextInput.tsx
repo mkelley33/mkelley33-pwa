@@ -26,7 +26,7 @@ export const InnerTextInput = (
       variant="outlined"
       sx={{
         display: 'block',
-        width: '400px',
+        width: '340px',
         margin: '0 auto 1.25rem auto',
       }}
     >
