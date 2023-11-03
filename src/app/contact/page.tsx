@@ -5,7 +5,8 @@ import { toast, ToastContainer } from 'react-toastify';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import useSafeRouter from '@/hooks/useSafeRouter';
+import { useRouter } from 'next/navigation';
+import { NextRouterWrapper } from '@/NextRouterWrapper';
 import { useRef, useState } from 'react';
 import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
@@ -54,7 +55,7 @@ const ContactForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const router = useSafeRouter();
+  const router = NextRouterWrapper.getAppRouter();
 
   const handleOnSubmit: SubmitHandler<IContactForm> = async (data) => {
     const res = await fetch('/api/contact/hcaptcha', {

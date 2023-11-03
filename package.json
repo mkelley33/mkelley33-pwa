@@ -53,6 +53,7 @@
     "hastscript": "^8.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "jest-mock-extended": "^3.0.5",
     "next-contentlayer": "^0.3.4",
     "postcss": "^8.4.30",
     "rehype-autolink-headings": "^7.0.0",
