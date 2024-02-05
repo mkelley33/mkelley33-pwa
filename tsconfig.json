@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*", "./mocks/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "types": ["@ducanh2912/next-pwa/workbox"]
