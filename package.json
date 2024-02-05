@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "npm": "10.3.0",
-    "node": "v20.11.0"
+    "node": "v18.x"
   },
   "scripts": {
     "dev": "next dev",
