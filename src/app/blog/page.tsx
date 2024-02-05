@@ -1,15 +1,18 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { compareDesc, format, parseISO } from 'date-fns';
 import { allPosts, type Post } from 'contentlayer/generated';
 import Pagination from '@/components/Pagination';
 import { memo } from 'react';
 
+export const metadata: Metadata = {
+  title: 'Blog',
+};
+
 // https://gist.github.com/kottenator/9d936eb3e4e3c3e02598?permalink_comment_id=3413141#gistcomment-3413141
 function paginate(current: number, total: number) {
   const center = [current - 2, current - 1, current, current + 1, current + 2],
-    filteredCenter: Array<string | number> = center.filter(
-      (p) => p > 1 && p < total
-    ),
+    filteredCenter: Array<string | number> = center.filter((p) => p > 1 && p < total),
     includeThreeLeft = current === 5,
     includeThreeRight = current === total - 4,
     includeLeftDots = current > 5,
@@ -35,21 +38,13 @@ function PostCard(post: Post) {
       <time dateTime={post.date} className="mb-2 block text-xs">
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
-      <p className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0">
-        {post.description}
-      </p>
+      <p className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0">{post.description}</p>
     </article>
   );
 }
 
-const BlogList = async ({
-  searchParams,
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) => {
-  const posts = allPosts.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
-  );
+const BlogList = async ({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) => {
+  const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
   const page = +(searchParams?.page ?? 1);
   const limit = +(searchParams?.limit ?? 5);
 
