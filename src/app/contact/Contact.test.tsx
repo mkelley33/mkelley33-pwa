@@ -1,12 +1,13 @@
 import { DeepMockProxy, mockDeep } from 'jest-mock-extended';
 import { render, screen } from '@testing-library/react';
-import { sendEmail, verifyHCaptcha } from './page';
 
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 import ContactForm from './ContactForm';
 import { NextRouterWrapper } from '@/NextRouterWrapper';
 import { jest } from '@jest/globals';
+import { sendEmail } from '@/lib/send-email';
 import { setup } from '@/lib/test-helper';
+import { verifyHCaptcha } from '@/lib/verify-hcaptcha';
 
 describe('Contact form renders', () => {
   const mockAppInstance: DeepMockProxy<AppRouterInstance> = mockDeep<AppRouterInstance>();
