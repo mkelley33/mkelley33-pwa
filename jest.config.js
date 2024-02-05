@@ -4,7 +4,9 @@ const nextJest = require('next/jest');
 const createJestConfig = nextJest({ dir: './' });
 
 // Any custom config you want to pass to Jest
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 const customJestConfig = {
+  preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
   collectCoverage: true,

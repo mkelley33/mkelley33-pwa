@@ -1,3 +1,5 @@
+'use client';
+
 import { TextField } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
