@@ -16,57 +16,32 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
-<<<<<<< Updated upstream
     "@ducanh2912/next-pwa": "~10.2.5",
-=======
-    "@ducanh2912/next-pwa": "~10.0.2",
->>>>>>> Stashed changes
     "@emotion/react": "~11.11.3",
     "@emotion/styled": "~11.11.0",
     "@hcaptcha/react-hcaptcha": "~1.9.3",
     "@hookform/resolvers": "~3.3.4",
     "@mui/material": "~5.15.7",
-<<<<<<< Updated upstream
     "clsx": "~2.1.0",
     "date-fns": "~3.3.1",
     "disqus-react": "~1.1.5",
     "hcaptcha": "~0.1.1",
     "next": "~14.1.0",
-=======
-    "clsx": "~2.0.1",
-    "date-fns": "~2.30.0",
-    "disqus-react": "~1.1.5",
-    "hcaptcha": "~0.1.1",
-    "next": "~14.0.4",
->>>>>>> Stashed changes
     "next-sitemap": "~4.2.3",
     "nodemailer": "~6.9.9",
     "react": "~18",
     "react-dom": "~18",
-<<<<<<< Updated upstream
     "react-hook-form": "~7.50.0",
-=======
-    "react-hook-form": "~7.49.3",
->>>>>>> Stashed changes
     "react-toastify": "~9.1.3",
     "yup": "~1.3.3"
   },
   "devDependencies": {
-<<<<<<< Updated upstream
     "@testing-library/jest-dom": "~6.4.2",
     "@testing-library/react": "~14.2.1",
     "@testing-library/user-event": "~14.5.2",
     "@types/eslint": "~8.56.2",
     "@types/jest": "~29.5.12",
     "@types/node": "~20.11.16",
-=======
-    "@testing-library/jest-dom": "~6.1.6",
-    "@testing-library/react": "~14.1.2",
-    "@testing-library/user-event": "~14.5.2",
-    "@types/eslint": "~8.44.9",
-    "@types/jest": "~29.5.12",
-    "@types/node": "~20.8.10",
->>>>>>> Stashed changes
     "@types/nodemailer": "~6.4.14",
     "@types/react": "~18.2.54",
     "@types/react-dom": "~18.2.18",
@@ -74,41 +49,23 @@
     "bright": "~0.8.4",
     "contentlayer": "~0.3.4",
     "eslint": "~8.56.0",
-<<<<<<< Updated upstream
     "eslint-config-next": "~14.1.0",
     "hastscript": "~9.0.0",
-=======
-    "eslint-config-next": "~14.0.4",
-    "hastscript": "~8.0.0",
->>>>>>> Stashed changes
     "jest": "~29.7.0",
     "jest-environment-jsdom": "~29.7.0",
     "jest-mock-extended": "~3.0.5",
     "next-contentlayer": "~0.3.4",
     "postcss": "~8.4.34",
-<<<<<<< Updated upstream
     "rehype-autolink-headings": "~7.1.0",
     "rehype-code-titles": "~1.2.0",
     "rehype-pretty-code": "~0.12.6",
     "rehype-prism-plus": "~2.0.0",
-=======
-    "rehype-autolink-headings": "~7.0.0",
-    "rehype-code-titles": "~1.2.0",
-    "rehype-pretty-code": "~0.10.2",
-    "rehype-prism-plus": "~1.6.3",
->>>>>>> Stashed changes
     "rehype-slug": "~6.0.0",
     "remark-gfm": "~3.0.1",
     "sharp": "~0.33.2",
     "shiki": "~0.14.7",
-<<<<<<< Updated upstream
     "tailwindcss": "~3.4.1",
     "ts-jest": "~29.1.2",
     "typescript": "~5.3.3"
-=======
-    "tailwindcss": "~3.3.7",
-    "ts-jest": "~29.1.2",
-    "typescript": "~5.2.2"
->>>>>>> Stashed changes
   }
 }
