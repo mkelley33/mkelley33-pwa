@@ -1,0 +1,88 @@
+---
+title: 'How to create a Next.js blog using MDX markdown'
+date: '2024-02-06'
+description: 'A React, TypeScript, and Next.js tutorial for creating a blog using MDX markdown'
+---
+
+## MDX: writing a blog post in <a href="https://mdxjs.com/" target="markdown-component-era" rel="noopener">markdown for the component era</a>
+
+### Reasons why MDX with Next.js, React, and TypeScript
+
+- Next.js <a href="https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation" target="nextjs-ssg" rel="noopener">uses
+  SSG (Static Site Generation)</a> to create pages from MDX at build time
+- <a href="https://aws.amazon.com/caching/cdn/#:~:text=For%20caching%2C%20a%20CDN%20will,Point%20of%20Presence%20(PoP)." target="aws-caching" rel="noopener">Cache blog posts using a CDN</a>
+- Blog faster writing MDX than <a href="https://byby.dev/js-markdown-libs" target="mdx-alternatives" rel="noopener">alternative approaches</a> with HTML or other blogging platforms
+- <a href="https://mdxjs.com/#mdx-in-short" target="mdx-in-short" rel="noopener">Read about the benefits of MDX</a>
+- React components can be used in MDX
+- <a href="https://prismic.io/blog/what-is-typescript" target="prismic-what-is-typescript" rel="noopener">TypeScript reasons</a>: reduces bugs, documents code, enhances code quality, and makes code more maintainable
+
+## 1. Getting Started: Create a Next.js app
+
+This post shows you how to create your own Next.js blog using MDX markdown with React and TypeScript.
+
+### Pre-requisites and recommendations
+
+**Required**: a terminal and preferably some command-line knowledge
+
+### 1.1 **Install the project basics**
+
+- <a href="https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script" target="install-nvm" rel="noopener">Install nvm</a> to get the latest version of node.js LTS
+- `node -v > .nvmrc`. I'm using v20.8.0
+- `mkdir my-nextjs-blog` wherever you keep projects directory
+- `cd my-nextjs-blog`
+- <a href="https://code.visualstudio.com/" target="install-vs-code">Install Visual Studio Code</a>
+- <a href="https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line" target="vscode-command-line" rel="noopener">Launch Visual Studio Code</a>: `code .`
+- `⌘ + j` to open a terminal in your editor
+- `git init`
+- `npx gitignore node`
+- `git add .`
+- `git commit -m 'Add initial files`
+
+### 1.2 **Install Next.js**
+
+```shell showLineNumbers
+$ npx create-next-app
+
+Need to install the following packages:
+create-next-app@14.1.0
+Ok to proceed? (y)
+
+<Press return>
+
+✔ What is your project named? … . <literally type a period instead of a name>
+✔ Would you like to use TypeScript? … No / [Yes]
+✔ Would you like to use ESLint? … No / [Yes]
+✔ Would you like to use Tailwind CSS? … [No] / Yes <Really this is up to you>
+✔ Would you like to use `src/` directory? … No / [Yes]
+✔ Would you like to use App Router? (recommended) … No / [Yes]
+✔ Would you like to customize the default import alias (@/*)? … [No] / Yes
+Creating a new Next.js app in /Users/your-username/projects/my-nextjs-blog.
+
+Using npm.
+
+Initializing project with template: app
+
+
+Installing dependencies:
+- react
+- react-dom
+- next
+
+Installing devDependencies:
+- typescript
+- @types/node
+- @types/react
+- @types/react-dom
+- eslint
+- eslint-config-next
+
+<Wait for installation to finish>
+
+added 311 packages, and audited 312 packages in 18s
+
+119 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+Success! Created my-nextjs-blog at /Users/your-username/projects/my-nextjs-blog
+```
