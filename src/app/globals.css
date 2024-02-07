@@ -110,11 +110,24 @@
     }
   }
 
+  h4 {
+    @apply mb-5 text-xl;
+  }
+
   p {
     @apply lg:text-lg mb-7;
   }
 
   code {
     @apply mb-4;
+  }
+
+  ul {
+    list-style-type: disc;
+    @apply ml-14 mb-4;
+  }
+
+  ul > li {
+    @apply mb-3;
   }
 }
