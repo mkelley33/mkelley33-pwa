@@ -66,8 +66,8 @@ const BlogList = async ({ searchParams }: { searchParams?: { [key: string]: stri
   return (
     <section>
       <h1>Blog Posts by Michaux Kelley</h1>
-      {postsSlice.map((post, idx) => (
-        <PostCard key={idx} {...post} />
+      {postsSlice.map((post) => (
+        <PostCard key={post.url} {...post} />
       ))}
 
       <Pagination
