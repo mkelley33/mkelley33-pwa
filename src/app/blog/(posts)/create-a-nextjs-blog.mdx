@@ -86,3 +86,32 @@ added 311 packages, and audited 312 packages in 18s
 found 0 vulnerabilities
 Success! Created my-nextjs-blog at /Users/your-username/projects/my-nextjs-blog
 ```
+
+## 2. Install and configure the blog dependencies
+
+### 2.1 Add Contentlayer, next-contentlayer
+
+#### 2.1.1 Why you need Contentlayer for Next.js
+
+From <a href="https://contentlayer.dev/" target="content-layer" rel="noopener">Contentlayer</a>:
+
+"Contentlayer is a content SDK that validates and transforms your content into type-safe JSON data you can easily import into your application."
+
+We'll use it to transform our MDX markdown files into JSON that Next.js can consume.
+
+#### 2.1.2 Installing Contentlayer and next-contentlayer with Next.js 14.1.0
+
+**The problem** is that next-contentlayer doesn't yet support Next.js 14.1.0
+
+So to install next-contentlayer with Next.js 14.1.0 you can do the following:
+
+```shell
+$ npm i -D contentlayer@latest next-contentlayer@latest --legacy-peer-deps
+```
+
+At the time of this writing that translates to versions `0.3.4` being installed.
+
+- However, <a href="https://github.com/shadcn/next-contentlayer/issues/21" target="next-contentlayer-21" rel="noopener">there is an open issue on GitHub</a>.
+- There's also an <a href="https://github.com/shadcn/next-contentlayer/pull/24" target="next-contentlayer-pr-24" rel="noopener">approved PR out there</a>
+ that fixes one of the issues with `next/image` in an MDX component.
+
