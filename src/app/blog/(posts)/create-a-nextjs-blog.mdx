@@ -115,3 +115,30 @@ At the time of this writing that translates to versions `0.3.4` being installed.
 - There's also an <a href="https://github.com/shadcn/next-contentlayer/pull/24" target="next-contentlayer-pr-24" rel="noopener">approved PR out there</a>
  that fixes one of the issues with `next/image` in an MDX component.
 
+### 2.2 Pause for npm dependency care
+
+This is around the time when I peg everything to patch versions
+**Note**: I _do update_ to minor versions too, just more carefully, and less frequently than patch versions.
+
+So open the `package.json` in your root directory and do the following:
+
+- Move your cursor to the first caret ^ and press ⌘ + d (or ctrl + d) until all the carets are selected.
+- Press delete, then press ~ to peg everything to the patch version
+
+You might see that versions of some packages may look something like this `~18` now.
+I prefer to see the exact version listed in my package.json and that will put us on
+the same page. So run the following and copy the exact versions from the output of `npm ls`
+into your package.json:
+
+**Optional**:
+
+```shell
+$ npm i -g npm-check-updates
+$ npx ncu -ut patch
+$ npm i
+$ git add package.json package-lock.json
+$ git commit -m 'Update dependencies'
+```
+
+Now all of your dependencies in package.json should be the latest patch versions.
+
