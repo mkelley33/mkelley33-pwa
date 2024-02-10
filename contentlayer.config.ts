@@ -4,7 +4,6 @@ import rehypeAutoLinkHeadings, {
 } from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
-import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from 'rehype-prism-plus';
 import { s } from 'hastscript';
 
@@ -49,13 +48,12 @@ export default makeSource({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,
-      rehypeCodeTitles,
       rehypePrism,
       [
         rehypeAutoLinkHeadings,
         {
           behavior: 'prepend',
-          test: ['h2', 'h3'],
+          test: ['h2', 'h3', 'h4'],
           properties: { class: 'heading-link', ariaLabel: 'Link to section' },
           content: s(
             'svg',
