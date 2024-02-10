@@ -7,11 +7,11 @@ export default function Header() {
         @mkelley33:
       </Link>
       <nav>
-        <ul className="list-none flex gap-10">
-          <li>
+        <ul className="list-none flex gap-10 ml-7 mb-0">
+          <li className="mt-3">
             <Link href="/blog">Blog</Link>
           </li>
-          <li>
+          <li className="mt-3">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
