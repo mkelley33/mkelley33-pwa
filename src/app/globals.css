@@ -111,7 +111,11 @@
   }
 
   h4 {
-    @apply mb-5 text-xl;
+    @apply mb-5 text-lg;
+  }
+
+  h4 > a > svg {
+    @apply float-left mr-2;
   }
 
   p {
@@ -122,12 +126,23 @@
     @apply mb-4;
   }
 
-  ul {
-    list-style-type: disc;
-    @apply ml-14 mb-4;
+  ul, ol {
+    @apply ml-14 mb-8;
   }
 
-  ul > li {
+  ul {
+    list-style-type: disc;
+  }
+
+  ul > li, ol > li {
     @apply mb-3;
+  }
+
+  ul > li > a:hover {
+    @apply no-underline;
+  }
+
+  ol {
+    list-style-type: number;
   }
 }
