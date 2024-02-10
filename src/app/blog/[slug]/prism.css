@@ -5,10 +5,17 @@
  */
 
 /* inline code snippets */
+
 code {
   background: #333;
-  padding: 2px;
+  padding: 3px;
   border: 1px solid #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  code {
+    color: #fff;
+  }
 }
 
 code[class*='language-'],
@@ -16,6 +23,7 @@ pre[class*='language-'] {
   background: unset;
   padding: unset;
   border: unset;
+  display: block;
   color: #c5c8c6;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
@@ -34,15 +42,16 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  padding: 10px;
+  padding: 10px 10px 0;
 }
 
 /* Code blocks */
 pre[class*='language-'] {
-  padding: 1em;
+  padding: 1em 1em .5em;
   margin: 0.5em 0;
   overflow: auto;
   border-radius: 0.75em;
+  margin-bottom: 30px;
 }
 
 :not(pre) > code[class*='language-'],
