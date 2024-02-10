@@ -2,6 +2,7 @@ import './prism.css';
 
 import { format, parseISO } from 'date-fns';
 
+import CopyToClipboard from '@/components/CopyToClipboard';
 import DisqusComments from '@/components/DisqusComments';
 import Link from 'next/link';
 import type { MDXComponents } from 'mdx/types';
@@ -35,6 +36,7 @@ const BlogPost = ({ params: { slug } }: IBlogPostProps) => {
   const mdxComponents: MDXComponents = {
     // Override the default <a> element to use the next/link component.
     a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
+    CopyToClipboard: () => <CopyToClipboard />
   };
 
   return (

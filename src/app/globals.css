@@ -146,3 +146,13 @@
     list-style-type: number;
   }
 }
+
+@layer components {
+  .copy-code-button {
+      @apply pl-4 pr-4 pb-1 pt-1 rounded-lg text-sm text-slate-300;
+      background-color: rgba(29, 32, 33, 1);
+      position: relative;
+      top: 1.4rem;
+      width: 6rem;
+  }
+}
