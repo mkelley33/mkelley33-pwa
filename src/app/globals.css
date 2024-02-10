@@ -110,11 +110,39 @@
     }
   }
 
+  h4 {
+    @apply mb-5 text-lg;
+  }
+
+  h4 > a > svg {
+    @apply float-left mr-2;
+  }
+
   p {
     @apply lg:text-lg mb-7;
   }
 
   code {
     @apply mb-4;
+  }
+
+  ul, ol {
+    @apply ml-14 mb-8;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ul > li, ol > li {
+    @apply mb-3;
+  }
+
+  ul > li > a:hover {
+    @apply no-underline;
+  }
+
+  ol {
+    list-style-type: number;
   }
 }
